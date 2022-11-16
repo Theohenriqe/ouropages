@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="icon" href="img/objective-lens-icon-with-six-rainbow-colors-vector.jpg">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="icon" href="img/ft08.png">
+    <title>Document</title>
+</head>
+
+<style> 
+       @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* css */
+
+    html,body{width:100%;}
+    .header{
+        min-height: 10vh;
+        width: 100%;
+        background-color:rgb(0, 0, 0) ;
+        color: rgb(255, 238, 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'VT323', monospace;    
+    }
+    .lista-menu{/*ul*/
+        display: flex; 
+        list-style-type:none;
+        font-size: 1.9rem;
+    }
+    .item-menu{ /*li*/
+        padding: 15px 20px;
+    }
+    .link-menu{/*a*/
+        
+        text-decoration: none;
+        color: rgb(255, 255, 0); 
+    }
+    .link-menu:hover{background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);}
+
+    #icone-menu{
+        font-size:2rem;
+        display: none;
+    }
+    
+    .carrossel-ouro{
+        width: 100%;
+        height: 71vh;
+        position: relative;
+    }
+    .titulo-carrossel{
+        font-family: 'VT323', monospace;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: center;
+        font-size: 3.2rem;
+        color: rgb(0, 251, 239);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .link-carrossel{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 1.8rem;
+        background-color: rgb(5, 255, 159);
+        border-radius: 10px;
+        padding: 10px 15px;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 3;
+        font-family:'VT323', monospace ;
+    }
+    .link-carrossel:hover{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+    .kit-ouro{
+        font-family: 'VT323', monospace;
+        padding: 10px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 2px;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-kit{
+        width: 220px;
+        height: 110px;
+    }
+
+    .swiper{
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: rgb(255, 255, 255);
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        object-position: 70% 100%;
+    }
+    .div-kit-ouro{
+        background-color: rgb(255, 255, 255);
+        width: 0%;
+        height: 100%;
+        padding: 0%;
+        text-align: center;
+        border-radius: 15px;
+    }
+    .ouro{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        background-color: rgb(255, 238, 0);
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        margin: 10px 0px;
+        box-shadow: 2px 2px 50px black;
+    }
+    
+
+    .div-ouro{
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: 'VT323', monospace;
+    }
+    .div-ouro h3{background-color: rgb(247, 4, 255);}
+    .div-ouro ul{list-style-type: none;}
+    .div-ouro ul li{padding: 10px 0px;text-transform: capitalize;}
+    .img-ouro{/*Ajuste de img do bloco 2*/
+        width: 75%;
+        height: 350px;
+        border-radius: 15px;
+        object-fit: fill;
+    }
+    .h3{
+        font-family: 'VT323', monospace;
+    }
+    .footer-ouro{
+        width: 100%;
+        height: auto;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .img-footer-ouro{
+        width: 150px;
+        height: 130px;
+        border-radius: 25px;
+    }
+    .lista-footer-ouro{
+        display: flex;
+        list-style-type: none;
+    }
+    .img-footer-ouro{
+        padding: 15px;
+    }
+    .txt-footer{
+        font-family: 'VT323', monospace;
+        color: aqua;
+    }
+    @media screen  and (max-width:768px){
+        .header{flex-direction: column; width: 100%;}
+        .lista-menu{flex-direction: column;text-align: center;}
+        #icone-menu{display: block;}
+        .item-menu{display: none;}
+        .ativar{display: block;}
+        .item-menu:hover{background-color: aquamarine; 
+            width:100vw ; color: black;  
+        }
+        .link-menu:hover{color: black;}
+        #icone-menu:hover{background-color: aqua;}
+        .carrossel{width: 100%; height: 50vh;position: relative;}
+        .link-carrossel{top: 90%;font-size: 1.2rem; text-align: center;}
+        .kit-ouro,.ouro{grid-template-columns: 1fr;}
+        .footer-ouro{flex-direction: column; justify-content: center;height: auto;}
+    }
+
+</style>
+
+<body>
+    <header class="header">
+        <h1 class="logo-txt">Gold 18K</h1>
+
+        <div>
+            <span id="icone-menu" class="material-symbols-outlined">Menu</span>
+        </div>
+        <nav class="menu">
+            <ul class="lista-menu">
+                <li class="item-menu">
+                    <a href="#ouro" class="link-menu">Ouro</a>
+                </li>
+                <li class="item-menu">
+                    <a href="#" class="link-menu">Colar</a>
+                </li>
+                <li class="item-menu">
+                    <a href="#" class="link-menu">Anel</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carrossel-ouro" id="carrossel">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/ft09.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/gold-4112176_960_720.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/earrings-2900742_960_720.jpg" alt="">
+                  </div>
+                </div>
+            </div>
+
+            <h2 class="titulo-carrossel"></h2>
+            <a href="https://api.whatsapp.com/send?phone=5592985408438&text=Quero%20Ouro!" 
+            target="_blank"class="link-carrossel">Contate-nos Aqui!</a>
+
+        </section>
+
+       
+
+        <section class="ouro" id="ouro">
+            <div class="div-ouro">
+                <img src="img/ft01.jpg" alt="" class="img-ouro">
+            </div>
+            <div class="div-ouro">
+                <h3>Tipo de Ouro</h3>
+                <ul>
+                    <li>Ouro 18K</li>
+                    <li>Ouro 16K</li>
+                    <li>Ouro 14K</li>
+                    <li>Ouro 12K</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="ouro" id="ouro">
+            <div class="div-ouro" style="order: 2;">
+                <img src="img/gold-4112176_960_720.jpg" alt="" class="img-ouro">
+            </div>
+            <div class="div-ouro">
+                <h3>Colar</h3>
+                <ul>
+                    <li>100% ouro</li>
+                    <li>75% ouro</li>
+                    <li>60% ouro</li>
+                    <li>50% ouro</li>
+                    <li>20% ouro</li>
+                </ul>
+            </div>
+        </section>
+
+        
+
+        
+        
+       
+    </script>
+
+    <script> 
+        const menu = document.getElementById('icone-menu');
+        const link = document.getElementsByClassName('item-menu');
+   
+        menu.addEventListener('click',()=>{
+            for(i=0;i<=link.length;i++){
+                link[i].classList.toggle('ativar');
+            }
+        })
+    </script>   
+</body>
+</html>
